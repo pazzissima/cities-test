@@ -1,0 +1,16 @@
+#wrapper {
+    width: 100%;
+  }
+  #wrapper ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  li {
+    margin: auto;
+  }
+  li.active {
+    border-bottom: 1px solid black;
+  }
