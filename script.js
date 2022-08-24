@@ -8,24 +8,30 @@ async function updateUI() {
     for (let i of data.cities) {
       let city = document.createElement("li");
       city.classList.add("city");
-      console.log("Print i: ", i);
-      city.innerHTML = i.label;
+      city.innerHTML = `<a href="#" class="city_link">${i.label}</a>`;
       wrapper.appendChild(city);
 
-      city.addEventListener("click", (e) => {
-        var elems = document.querySelectorAll(".city");
-        [].forEach.call(elems, function (el) {
-          el.classList.remove("active");
-        });
-        e.target.classList.add("active");
-      });
+      // city.addEventListener("click", (e) => {
+      //   var elems = document.querySelectorAll(".city");
+      //   [].forEach.call(elems, function (el) {
+      //     el.classList.remove("active");
+      //   });
+      //   e.target.classList.add("active");
+      // });
     }
+    const menu = document.querySelector(".city_list");
+    menu.addEventListener("click", (event) => {
+      if (event.target.classList.contains("city_link")) {
+        menu.style.setProperty(
+          "--underline-width",
+          `${event.target.offsetWidth}px`
+        );
+        menu.style.setProperty(
+          "--underline-offset-x",
+          `${event.target.offsetLeft}px`
+        );
+      }
+    });
   });
 }
-
-/* const res = await fetch("./navigation.json");
-  cities = await res.json();
-
-  console.log(cities);*/
-
 updateUI();

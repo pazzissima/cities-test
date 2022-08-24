@@ -1,16 +1,43 @@
-#wrapper {
-    width: 100%;
-  }
-  #wrapper ul{
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-  li {
-    margin: auto;
-  }
-  li.active {
-    border-bottom: 1px solid black;
-  }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.city_list {
+  --underline-width: 0;
+  --underline-offset-x: 0;
+  
+  position: relative;
+  display: inline-flex;
+/*   justify-content: space-evenly; */
+  margin: 0;
+  padding: 0;
+  width:100%;
+}
+
+.city_list::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  height: 1px;
+  width: var(--underline-width);
+  transform: translateX(var(--underline-offset-x));
+  background-color: #000;
+  transition: transform 0.5s, width 0.5s;
+  border-radius: 4px;
+}
+.city a {
+  font-size: 0.9em;
+  color: #aaa;
+}
+.city a:hover {
+  color: lightblue;
+}
+.city_link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
