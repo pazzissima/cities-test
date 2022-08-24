@@ -16,7 +16,7 @@ body {
   
   position: relative;
   display: inline-flex;
-  gap: 45px;
+  gap: 30px;
 /*   justify-content: space-evenly; */
   margin: 0;
   padding: 0;
@@ -35,6 +35,7 @@ body {
 .city a {
   font-size: 0.9em;
   color: #aaa;
+  word-wrap: break-word;
 }
 .city a:hover {
   color: #2a7ee0;
@@ -55,5 +56,11 @@ hr {
   background-color: #ccc;
   border: none;
   margin: 0 auto;
-  width: 70%;
+  max-width: 800px;
+}
+/* DESKTOP */
+@media only screen and (min-width: 1200px) {
+  .city_list {
+    gap: 45px;
+  }
 }

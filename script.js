@@ -36,3 +36,19 @@ async function updateUI() {
   });
 }
 updateUI();
+
+//Update underline on window re-size
+window.addEventListener('resize', ()=> {
+  let el = document.getElementsByClassName("active")[0];
+  const menu = document.querySelector(".city_list");
+  if (el.classList.contains("city_link")) {
+    menu.style.setProperty(
+      "--underline-width",
+      `${el.offsetWidth}px`
+    );
+    menu.style.setProperty(
+      "--underline-offset-x",
+      `${el.offsetLeft}px`
+    );
+  }
+});
