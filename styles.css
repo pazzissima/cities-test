@@ -16,10 +16,14 @@ body {
   
   position: relative;
   display: inline-flex;
-  gap: 30px;
+  /* gap: 30px; */
+  margin: 0 -15px;
 /*   justify-content: space-evenly; */
   margin: 0;
   padding: 0;
+}
+.city_list > * {
+  margin: 0 15px;
 }
 .city_list::before {
   content: "";
@@ -61,6 +65,9 @@ hr {
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
   .city_list {
-    gap: 45px;
+    margin: 0 -23px;
+  }
+  .city_list > *{
+    margin: 0 23px;
   }
 }
