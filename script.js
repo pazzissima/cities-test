@@ -11,8 +11,9 @@ async function updateUI() {
       city.innerHTML = `<a href="#" class="city_link">${i.label}</a>`;
       wrapper.appendChild(city);
 
+      //Toggle active class on click to change colors
       city.addEventListener("click", (e) => {
-        var elems = document.querySelectorAll(".city");
+        var elems = document.querySelectorAll(".city_link");
         [].forEach.call(elems, function (el) {
           el.classList.remove("active");
         });

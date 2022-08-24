@@ -5,12 +5,16 @@ body {
   flex-direction: column;
   width: 100%;
 }
+#wrapper {
+  margin-top: 50px;
+}
 .city_list {
   --underline-width: 0;
   --underline-offset-x: 0;
   
   position: relative;
   display: inline-flex;
+  gap: 45px;
 /*   justify-content: space-evenly; */
   margin: 0;
   padding: 0;
@@ -26,7 +30,6 @@ body {
   transform: translateX(var(--underline-offset-x));
   background-color: #000;
   transition: transform 0.5s, width 0.5s;
-  border-radius: 4px;
 }
 .city a {
   font-size: 0.9em;
@@ -37,12 +40,18 @@ body {
 }
 .city_link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   text-decoration: none;
 }
 li.city {
   list-style: none;
 }
-.city.active{
+.city a.active{
   color: #555555;
+}
+hr {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+  margin: 0;
 }
