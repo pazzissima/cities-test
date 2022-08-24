@@ -16,14 +16,13 @@ body {
   
   position: relative;
   display: inline-flex;
-  /* gap: 30px; */
-  margin: 0 -15px;
-/*   justify-content: space-evenly; */
-  margin: 0;
+  /* Using margin instead of gap for Safari */
+  margin: 0 -7px;
   padding: 0;
 }
+/* Using margin instead of gap for Safari */
 .city_list > * {
-  margin: 0 15px;
+  margin: 0 7px;
 }
 .city_list::before {
   content: "";
@@ -61,6 +60,15 @@ hr {
   border: none;
   margin: 0 auto;
   max-width: 800px;
+}
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1199px){
+  .city_list {
+    margin: 0 -15px;
+  }
+  .city_list > *{
+    margin: 0 15px;
+  }
 }
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
