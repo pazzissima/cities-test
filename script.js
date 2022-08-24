@@ -20,6 +20,7 @@ async function updateUI() {
         e.target.classList.add("active");
       });
     }
+    // Dynamically updating the underline
     const menu = document.querySelector(".city_list");
     menu.addEventListener("click", (event) => {
       if (event.target.classList.contains("city_link")) {
