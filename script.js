@@ -41,7 +41,7 @@ updateUI();
 window.addEventListener('resize', ()=> {
   let el = document.getElementsByClassName("active")[0];
   const menu = document.querySelector(".city_list");
-  if (el.classList.contains("city_link")) {
+  if (el!== undefined && el.classList.contains("city_link")) {
     menu.style.setProperty(
       "--underline-width",
       `${el.offsetWidth}px`
