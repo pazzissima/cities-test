@@ -11,13 +11,13 @@ async function updateUI() {
       city.innerHTML = `<a href="#" class="city_link">${i.label}</a>`;
       wrapper.appendChild(city);
 
-      // city.addEventListener("click", (e) => {
-      //   var elems = document.querySelectorAll(".city");
-      //   [].forEach.call(elems, function (el) {
-      //     el.classList.remove("active");
-      //   });
-      //   e.target.classList.add("active");
-      // });
+      city.addEventListener("click", (e) => {
+        var elems = document.querySelectorAll(".city");
+        [].forEach.call(elems, function (el) {
+          el.classList.remove("active");
+        });
+        e.target.classList.add("active");
+      });
     }
     const menu = document.querySelector(".city_list");
     menu.addEventListener("click", (event) => {
